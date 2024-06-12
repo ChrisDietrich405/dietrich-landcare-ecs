@@ -1,0 +1,29 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "no-mixed-spaces-and-tabs": "error",
+    "no-tabs": "error",
+    "indent": [
+      "error",
+      2
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "beforeSelfClosing": "always"
+      }
+    ],
+    "quote-props": [
+      "error",
+      "as-needed", {
+        "keywords": false,
+        "unnecessary": true,
+        "numbers": false
+      }
+    ]
+  }
+}

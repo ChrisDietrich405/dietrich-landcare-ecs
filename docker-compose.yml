@@ -1,0 +1,23 @@
+version: "3"
+
+services: 
+  frontend-dev: 
+    build:
+      context: .
+      dockerfile: ./docker/dev/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes: 
+      - ./:/app
+  
+  frontend-prod:
+    build: 
+      context: . 
+      dockerfile: ./docker/prod/Dockerfile
+    ports: 
+      - "3001:3000"
+
+
+   
+    
+

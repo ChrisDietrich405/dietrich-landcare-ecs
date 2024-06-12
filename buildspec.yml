@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo "Installing dependencies..."
+      - npm install
+  pre_build:
+    commands:
+      - echo "Running the test"
+      - npm run test
+  build:
+    commands:
+      - echo "Building React app..."
+      - npm run build
+  post_build:
+    commands:
+      - echo "Running tests..."
+      # Include your test commands here
+      - npm test
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'build'
